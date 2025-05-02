@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import Nav from './Components/NavbarDummy/Nav'
-import Login from './Components/LoginPage/login'
+import Login from './Components/LoginPage/Login';  // Case-sensitive match
 import { Routes, Route } from 'react-router-dom';
 import SignUp from './Components/SignUpPage/SignUp'
 import HomePage from './Components/HomePage/HomePage'

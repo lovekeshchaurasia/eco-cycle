@@ -1,4 +1,3 @@
-// components/Navbar.jsx
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -25,7 +24,7 @@ const Nav = () => {
   const NavItem = ({ to, children }) => (
     <Link
       to={to}
-      className="block md:inline-block px-3 py-2 rounded hover:bg-green-800 transition"
+      className="block md:inline-block px-3 py-2 rounded hover:bg-mdOlive transition"
       onClick={() => setOpen(false)}
     >
       {children}
@@ -33,14 +32,14 @@ const Nav = () => {
   );
 
   return (
-    <nav className="bg-mdOlive text-white shadow px-6 py-4 sticky top-0 z-50 ">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <nav className="bg-green-700 text-white shadow px-6 py-4 sticky top-0 z-50 ">
+      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
         <Link to="/" className="text-2xl font-bold tracking-wide" onClick={() => setOpen(false)}>
           ♻️ WasteWise
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex md:flex-wrap items-center justify-between w-full md:w-auto space-y-2 md:space-y-0 md:space-x-6 mt-2 md:mt-0">
           {navLinks.map((link) => (
             <NavItem key={link.name} to={link.path}>
               {link.name}
@@ -140,3 +139,10 @@ const Nav = () => {
 
 
 export default Nav;
+
+
+
+
+
+
+
